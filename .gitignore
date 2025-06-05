@@ -1,2 +1,5 @@
 # Python WebScraper IGNORE:
 __pycache__/
+*.pyc
+*.pyo
+*.pyd
