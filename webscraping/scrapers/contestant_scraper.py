@@ -16,8 +16,8 @@ def scrape_returnees(table):
     contestants = []
     for row in table.findAll("tr"):
         # Getting imageURL
-        img = row.select("td > span > a > img")
-        img_url = img[0]['data-src'] if img and 'data-src' in img[0].attrs else None
+        img = row.select("td > span > a")
+        img_url = img[0]['href'] if img and 'href' in img[0].attrs else None
         # Getting contestant name 
         name = row.find("th").text
         columns = row.findAll("td")

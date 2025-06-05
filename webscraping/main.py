@@ -15,7 +15,7 @@ all_contestants = contestant_scraper.scrape(url, False)
 returning_contestants = contestant_scraper.scrape(url, True) 
 
 print("First Player Scraped: ", all_contestants[0])
-print("First Returing Player Scraped: ", returning_contestants[0])
+print("First Returing Player Scraped: ", returning_contestants[-1])
 
 # Current Condition: 
 

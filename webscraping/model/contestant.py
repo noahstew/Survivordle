@@ -39,7 +39,7 @@ class returning_contestant:
         self.seasons = seasons
         self.tribe_wins = tribe_wins
         self.individual_wins = individual_wins
-        self.days_lasted = days_lasted
+        self.days_lasted = days_lasted # NOTE: Includes edge of extinction and redemption island days
         self.votes_against = votes_against
     
     def __str__(self):
