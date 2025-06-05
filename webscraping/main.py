@@ -23,4 +23,4 @@ print("First Returing Player Scraped: ", returning_contestants[0])
 # Figure out 8, 9 and 10 column definitions
 
 # TODO: Returing Players
-# Get ImageURL Working
+# Get ImageURL Working for all (it's currently not working until Cirie)

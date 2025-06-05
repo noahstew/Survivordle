@@ -18,10 +18,12 @@ def scrape_returnees(table):
         # Getting imageURL
         img = row.select("td > span > a > img")
         img_url = img[0]['data-src'] if img and 'data-src' in img[0].attrs else None
-        
         # Getting contestant name 
         name = row.find("th").text
         columns = row.findAll("td")
+        
+        print(name ,"has Image URL ", img_url)  # Debugging line to check image URL
+
         if len(columns) > 0:
             # Extracting contestant details
             age = columns[1].get_text(strip=True)
@@ -58,7 +60,6 @@ def scrape_players(table):
         # Getting contestant name 
         name = row.find("th").text
         columns = row.findAll("td")
-        print("Columns found:", len(columns))  # Debugging line to check number of columns
         if len(columns) > 0:
             # Extracting contestant details
             birthday = columns[1].get_text(strip=True)
@@ -69,12 +70,11 @@ def scrape_players(table):
             days_lasted = columns[6].get_text(strip=True)
             votes_against = columns[7].get_text(strip=True)
 
+            # Handling the 8th, 9th, and 10th columns (need to define what they are)
             eight = columns[8].get_text(strip=True)
             nine = columns[9].get_text(strip=True)
             ten = columns[10].get_text(strip=True)
 
-            # Making seasons an array
-            # seasons = split_seasons(raw_seasons)
             
             # Creating contestant object
             contestant_obj = contestant(
