@@ -14,13 +14,4 @@ url = "https://survivor.fandom.com/wiki/List_of_Survivor_(U.S.)_contestants"
 all_contestants = contestant_scraper.scrape(url, False)
 returning_contestants = contestant_scraper.scrape(url, True) 
 
-print("First Player Scraped: ", all_contestants[0])
-print("First Returing Player Scraped: ", returning_contestants[-1])
-
-# Current Condition: 
-
-# TODO: All Players
-# Figure out 8, 9 and 10 column definitions
-
-# TODO: Returing Players
-# Get ImageURL Working for all (it's currently not working until Cirie)
+# TODO: Send to database 

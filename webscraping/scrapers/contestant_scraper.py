@@ -22,8 +22,6 @@ def scrape_returnees(table):
         name = row.find("th").text
         columns = row.findAll("td")
         
-        print(name ,"has Image URL ", img_url)  # Debugging line to check image URL
-
         if len(columns) > 0:
             # Extracting contestant details
             age = columns[1].get_text(strip=True)
@@ -52,7 +50,7 @@ def scrape_returnees(table):
 
 def scrape_players(table):
     contestants = []
-    for row in table.findAll("tr"):
+    for row in table.findAll("tr"):                    
         # Getting imageURL
         img = row.select("td > span > a > img")
         img_url = img[0]['data-src'] if img and 'data-src' in img[0].attrs else None
@@ -60,6 +58,8 @@ def scrape_players(table):
         # Getting contestant name 
         name = row.find("th").text
         columns = row.findAll("td")
+        
+
         if len(columns) > 0:
             # Extracting contestant details
             birthday = columns[1].get_text(strip=True)
@@ -74,6 +74,7 @@ def scrape_players(table):
             eight = columns[8].get_text(strip=True)
             nine = columns[9].get_text(strip=True)
             ten = columns[10].get_text(strip=True)
+            
 
             
             # Creating contestant object
