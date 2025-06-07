@@ -1,6 +1,6 @@
 # This module has the contestant class which is used to store information about a contestant in Survivor.
 class contestant:
-    def __init__(self, name, img_url, birthday, age, location_from, season, position, days_lasted, votes_against, eight, nine, ten):
+    def __init__(self, name, img_url, birthday, age, location_from, season, position, days_lasted, votes_against, tribe_wins, ind_wins, total_wins):
         self.name = name
         self.img_url = img_url
         self.birthday = birthday
@@ -10,9 +10,9 @@ class contestant:
         self.position = position
         self.days_lasted = days_lasted
         self.votes_against = votes_against
-        self.eight = eight
-        self.nine = nine
-        self.ten = ten
+        self.tribe_wins = tribe_wins
+        self.ind_wins = ind_wins
+        self.total_wins = total_wins
     
     def __str__(self):
         return f"""
@@ -25,9 +25,9 @@ Season: {self.season}
 Position: {self.position}
 Days Lasted: {self.days_lasted}
 Votes Against: {self.votes_against}
-Eight:{self.eight}
-Nine:{self.nine}
-Ten:{self.ten}
+tribe_wins:{self.tribe_wins}
+ind_wins:{self.ind_wins}
+total_wins:{self.total_wins}
 """
 
 
