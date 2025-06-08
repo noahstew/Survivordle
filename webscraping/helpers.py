@@ -6,3 +6,9 @@ def split_seasons(raw):
     # but only if it is NOT preceded by a space or dash
     parts = re.split(r'(?<![\s\-])(?=[A-Z][a-z0-9])', raw)
     return [p.strip() for p in parts if p.strip()]
+
+def filterSeasons(season_names):
+    # Only keep names that start with "Survivor"
+    return [name for name in season_names if name.startswith("Survivor")]
+
+ 

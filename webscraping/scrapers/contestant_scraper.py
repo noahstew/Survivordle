@@ -71,9 +71,9 @@ def scrape_players(table):
             votes_against = columns[7].get_text(strip=True)
 
             # Handling the 8th, 9th, and 10th columns (need to define what they are)
-            eight = columns[8].get_text(strip=True)
-            nine = columns[9].get_text(strip=True)
-            ten = columns[10].get_text(strip=True)
+            tribe_wins = columns[8].get_text(strip=True)
+            ind_wins = columns[9].get_text(strip=True)
+            total_wins = columns[10].get_text(strip=True)
             
 
             
@@ -88,10 +88,9 @@ def scrape_players(table):
                 position=position,
                 days_lasted=days_lasted,
                 votes_against=votes_against,
-                
-                eight=eight,
-                nine=nine,
-                ten=ten
+                tribe_wins=tribe_wins,
+                ind_wins=ind_wins,
+                total_wins=total_wins
             )   
             
             contestants.append(contestant_obj)
@@ -99,6 +98,8 @@ def scrape_players(table):
     return contestants
 
 def scrape(url, returning_only):
+    print("🐕 Fetching contestants")
+    
     # Fetch the page
     response = requests.get(url)
     
@@ -112,8 +113,8 @@ def scrape(url, returning_only):
 
     if returning_only:
         contestants = scrape_returnees(table)
-        print(f"✅ Successfully scraped {len(contestants)} returning contestants.")
+        print(f"🦴 Successfully scraped {len(contestants)} returning contestants.")
     else:
         contestants = scrape_players(table)
-        print(f"✅ Successfully scraped {len(contestants)} contestants.")
+        print(f"🦴 Successfully scraped {len(contestants)} contestants.")
     return contestants
