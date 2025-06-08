@@ -1,4 +1,5 @@
 # This module has the contestant class which is used to store information about a contestant in Survivor.
+# Note: Numeric fields may be "N/A" and will be normalized to -1 before DB insert
 class contestant:
     def __init__(self, name, img_url, birthday, age, location_from, season, position, days_lasted, votes_against, tribe_wins, ind_wins, total_wins):
         self.name = name
