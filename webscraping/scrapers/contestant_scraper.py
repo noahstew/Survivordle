@@ -19,7 +19,7 @@ def scrape_returnees(table):
         img = row.select("td > span > a")
         img_url = img[0]['href'] if img and 'href' in img[0].attrs else None
         # Getting contestant name 
-        name = row.find("th").text
+        name = row.find("th").text.strip()
         columns = row.findAll("td")
         
         if len(columns) > 0:
@@ -56,7 +56,7 @@ def scrape_players(table):
         img_url = img[0]['data-src'] if img and 'data-src' in img[0].attrs else None
         
         # Getting contestant name 
-        name = row.find("th").text
+        name = row.find("th").text.strip()
         columns = row.findAll("td")
         
 
