@@ -14,10 +14,8 @@ var DB *sql.DB
 
 func InitDB() {
 	// Load .env from two directories up
-	err := godotenv.Load("../.env")
-	if err != nil {
-		log.Fatal("Error loading .env file from project root")
-	}
+	// Try to load .env for local dev; skip error if not found (Docker will use runtime env vars)
+_ = godotenv.Load("../.env") // or godotenv.Load() if you're running from root
 
 	dsn := os.Getenv("DATABASE_URL")
 	if dsn == "" {
