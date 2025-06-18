@@ -4,23 +4,18 @@ package main
 type Contestant struct {
 	Name string `json:"name"`
 	Age  int    `json:"age"`
-	Season Season    `json:"season"`
-	DaysLasted int    `json:"days_lasted"`
+	Season string    `json:"season"`
+	DaysLasted string    `json:"days_lasted"`
 	VotesAgainst int    `json:"votes_against"`
-	Position string    `json:"position"`	
+	Placement string    `json:"placement"`	
+	ImgURL string `json:"img_url"`
 }
 
 type Returnee struct {
 	Name string `json:"name"`
 	Age  int    `json:"age"`
-	Season Season    `json:"season"`
-	DaysLasted int    `json:"days_lasted"`
+	Seasons string    `json:"seasons"`
+	DaysLasted string    `json:"days_lasted"`
 	VotesAgainst int    `json:"votes_against"`
-	HasWon bool    `json:"has_won"`
+	ImgURL string `json:"img_url"`
 }
-
-type Season struct {
-	SeasonNumber int    `json:"season_number"`
-	Title        string `json:"title"`
-	ImageURL	 string `json:"img_url"`
-} 
