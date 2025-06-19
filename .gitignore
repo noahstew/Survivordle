@@ -4,5 +4,11 @@ __pycache__/
 *.pyo
 *.pyd
 
-.env
-.env/
+# Node/Next.js ignores
+node_modules/
+.next/
+out/
+build/
+.DS_Store
+*.log
+.env*
