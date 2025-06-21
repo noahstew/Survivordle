@@ -1,1 +1,17 @@
 @import 'tailwindcss';
+
+@font-face {
+  font-family: 'survivant';
+  src: url('/fonts/survivant.ttf') format('truetype');
+}
+
+@theme {
+  /* Colours */
+  --color-survivor-green: #00ab50;
+  --color-survivor-blue: #358bbd;
+  --color-survsivor-orange: #f26c12;
+  --color-survivor-yellow: #f2c94c;
+
+  /* Fonts */
+  --font-survivant: 'survivant', sans-serif;
+}
