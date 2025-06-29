@@ -1,4 +1,26 @@
+import GameMode from './GameMode';
+import HowToPlay from './HowToPlay';
+import { gameModes } from '@/data/gameModes';
+
 function Hero() {
-  return <div className="h-screen bg-survivor-sand">Hero</div>;
+  return (
+    <>
+      <HowToPlay />
+      <GameMode
+        title={gameModes[0]?.title}
+        description={gameModes[0]?.description}
+        colour={gameModes[0]?.colour}
+        dailyLink={gameModes[0]?.dailyLink}
+        unlimitedLink={gameModes[0]?.unlimitedLink}
+      />
+      <GameMode
+        title={gameModes[1]?.title}
+        description={gameModes[1]?.description}
+        colour={gameModes[1]?.colour}
+        dailyLink={gameModes[1]?.dailyLink}
+        unlimitedLink={gameModes[1]?.unlimitedLink}
+      />
+    </>
+  );
 }
 export default Hero;
