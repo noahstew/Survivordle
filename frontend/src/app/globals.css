@@ -9,8 +9,13 @@
   /* Colours */
   --color-survivor-green: #00ab50;
   --color-survivor-blue: #358bbd;
-  --color-survsivor-orange: #f26c12;
+  --color-survivor-green-dark: #059669;
+  --color-survivor-blue-dark: #1e40af;
+  --color-survivor-orange: #f26c12;
   --color-survivor-yellow: #f2c94c;
+  --color-survivor-sand: #cbbd93;
+  --color-survivor-sand-light: #fae8b4;
+  --color-survivor-sand-dark: #c2b280;
 
   /* Fonts */
   --font-survivant: 'survivant', sans-serif;
