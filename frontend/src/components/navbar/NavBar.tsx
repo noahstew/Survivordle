@@ -8,7 +8,7 @@ import { IoInfinite } from 'react-icons/io5';
 
 function NavBar() {
   return (
-    <nav className="relative justify-between gap-4 flex items-center p-4 bg-survivor-sand-light shadow-md">
+    <nav className="relative justify-between gap-4 flex items-center p-4 bg-survivor-sand-light ">
       <Menu icon={<MdCalendarToday />} color="text-survivor-blue" />
 
       <Link
