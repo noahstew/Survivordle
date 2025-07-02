@@ -28,12 +28,7 @@ function GameMode(gameMode: GameModeProps) {
         </div>
         {/* Description as image-like area */}
         <div className="w-full flex flex-col items-start px-6 mt-4">
-          <div
-            className="w-full min-h-[120px] flex items-center justify-center rounded-md  text-gray-800 text-lg font-medium mb-6"
-            style={{
-              background: 'linear-gradient(135deg, #f3f4f6 60%, #e5e7eb 100%)',
-            }}
-          >
+          <div className="w-full min-h-[120px] flex items-center justify-center rounded-md  text-gray-800 text-lg font-medium mb-6">
             {description}
           </div>
           {/* Buttons */}
