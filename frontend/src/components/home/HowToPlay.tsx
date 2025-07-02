@@ -64,7 +64,8 @@ function HowToPlay() {
             ***NOTE:
           </span>{' '}
           Rules are slightly different for each game mode, see below for
-          details.
+          details. Seasons 1-48 are contestants, and returnees include those
+          coming for Season 50.
         </p>
       </div>
     </div>

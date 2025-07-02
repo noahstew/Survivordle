@@ -29,8 +29,16 @@ function Menu({ icon, color }: MenuProps) {
       <MenuItem
         label={color === 'text-survivor-blue' ? 'Daily' : 'Unlimited'}
         color={color}
-        returneeHref="/unlimited/returnees"
-        contestantHref="/unlimited/contestants"
+        returneeHref={
+          color === 'text-survivor-blue'
+            ? '/daily/returnee'
+            : '/unlimited/returnee'
+        }
+        contestantHref={
+          color === 'text-survivor-blue'
+            ? '/daily/contestant'
+            : '/unlimited/contestant'
+        }
         side={color === 'text-survivor-blue' ? 'left' : 'right'}
         show={isOpen}
       />
