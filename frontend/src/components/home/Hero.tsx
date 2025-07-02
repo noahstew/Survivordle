@@ -4,7 +4,7 @@ import { gameModes } from '@/data/gameModes';
 
 function Hero() {
   return (
-    <div className="bg-survivor-sand-light p-4 md:p-8 lg:p-12">
+    <div className="bg-survivor-sand-light p-6 md:p-8 lg:p-12 pt-16">
       <HowToPlay />
       <div className="flex flex-col gap-8 md:flex-row md:gap-8 md:justify-center mt-16">
         <GameMode

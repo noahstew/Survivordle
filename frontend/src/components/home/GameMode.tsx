@@ -16,26 +16,26 @@ function GameMode(gameMode: GameModeProps) {
     <div className="relative flex flex-col items-start mb-8">
       {/* Border container */}
       <div
-        className="w-full rounded-lg border-2 px-0 pt-6 pb-6 bg-white"
+        className="w-full rounded-lg border-2 px-0 pt-6 pb-6 bg-white md:px-8 md:pt-10 md:pb-10"
         style={{ borderColor: colour }}
       >
         {/* Offset heading */}
         <div
-          className="absolute -top-5 left-4 px-6 py-2 rounded-lg shadow-md text-white text-2xl font-bold"
+          className="absolute -top-5 left-4 px-6 py-2 rounded-lg shadow-md text-white text-2xl font-bold md:-top-8 md:left-8 md:text-4xl md:px-10 md:py-4"
           style={{ backgroundColor: colour }}
         >
           {title}
         </div>
         {/* Description as image-like area */}
-        <div className="w-full flex flex-col items-start px-6 mt-4">
-          <div className="w-full min-h-[120px] flex items-center justify-center rounded-md  text-gray-800 text-lg font-medium mb-6">
+        <div className="w-full flex flex-col items-start px-6 mt-4 md:px-12 md:mt-8">
+          <div className="w-full min-h-[120px] flex items-center justify-center rounded-md text-gray-800 text-lg font-medium mb-6 md:min-h-[160px] md:text-2xl">
             {description}
           </div>
           {/* Buttons */}
-          <div className="flex gap-4 justify-between w-full">
+          <div className="flex gap-4 justify-between w-full flex-col md:flex-row md:gap-8 md:justify-start">
             <Link href={dailyLink}>
               <button
-                className="px-5 py-2 rounded-md text-white font-semibold shadow-md transition-colors duration-200"
+                className="px-5 py-2 rounded-md text-white font-semibold shadow-md transition-colors duration-200 w-full md:w-auto"
                 style={{ backgroundColor: colour }}
               >
                 Daily Mode
@@ -43,9 +43,8 @@ function GameMode(gameMode: GameModeProps) {
             </Link>
             <Link href={unlimitedLink}>
               <button
-                className="px-5 py-2  font-semibold transition-colors duration-200"
+                className="px-5 py-2 font-semibold transition-colors duration-200 w-full md:w-auto"
                 style={{ borderBottom: `2px solid ${colour}`, color: colour }}
-                // Remove event handlers, use Tailwind for hover effect
               >
                 <span
                   className="hover:text-white"
