@@ -6,7 +6,7 @@ function Hero() {
   return (
     <div className="bg-survivor-sand-light p-4 md:p-8 lg:p-12">
       <HowToPlay />
-      <div className="flex flex-col gap-8 md:flex-row md:gap-8 md:justify-center">
+      <div className="flex flex-col gap-8 md:flex-row md:gap-8 md:justify-center mt-16">
         <GameMode
           title={gameModes[0]?.title}
           description={gameModes[0]?.description}
