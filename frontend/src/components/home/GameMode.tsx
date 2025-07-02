@@ -27,12 +27,12 @@ function GameMode(gameMode: GameModeProps) {
           {title}
         </div>
         {/* Description as image-like area */}
-        <div className="w-full flex flex-col items-start px-6 mt-4 md:px-12 md:mt-8">
-          <div className="w-full min-h-[120px] flex items-center justify-center rounded-md text-gray-800 text-lg font-medium mb-6 md:min-h-[160px] md:text-2xl">
+        <div className="w-full flex flex-col items-start mt-4 ">
+          <div className="w-full min-h-[120px] flex items-center justify-center rounded-md text-gray-800 text-lg font-medium mb-6 px-4 md:p-0">
             {description}
           </div>
           {/* Buttons */}
-          <div className="flex gap-4 justify-between w-full flex-col md:flex-row md:gap-8 md:justify-start">
+          <div className="flex gap-4 justify-between w-full flex-col md:flex-row md:gap-8 px-4 md:p-0">
             <Link href={dailyLink}>
               <button
                 className="px-5 py-2 rounded-md text-white font-semibold shadow-md transition-colors duration-200 w-full md:w-auto"
