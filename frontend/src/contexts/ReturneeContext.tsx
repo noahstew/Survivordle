@@ -12,6 +12,7 @@ interface Returnee {
   name: string;
   age: number;
   seasons: string;
+  season_names?: string;
   days_lasted: number;
   votes_against: number;
   img_url: string;

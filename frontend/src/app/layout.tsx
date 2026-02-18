@@ -10,7 +10,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="font-survivant">
+      <body className="font-survivant overflow-x-hidden">
         <ReturneeProvider>
           <NavBar />
           {children}
