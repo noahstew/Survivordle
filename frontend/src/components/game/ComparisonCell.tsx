@@ -1,7 +1,5 @@
 'use client';
 
-import { ChevronUp, ChevronDown, Equal } from 'lucide-react';
-
 type ComparisonResult = 'correct' | 'higher' | 'lower' | 'before' | 'after';
 
 interface ComparisonCellProps {
@@ -20,18 +18,22 @@ export default function ComparisonCell({
     return 'bg-survivor-sand';
   };
 
-  const getIcon = () => {
+  const getArrow = () => {
     if (result === 'correct') return null;
     // For 'before' or 'lower': target is ahead/higher, so show UP arrow
     if (result === 'before' || result === 'lower') {
       return (
-        <ChevronUp className="w-4 h-4 md:w-5 md:h-5 text-survivor-orange" />
+        <span className="text-lg md:text-xl text-survivor-orange font-bold ml-1">
+          ↑
+        </span>
       );
     }
     // For 'after' or 'higher': target is behind/lower, so show DOWN arrow
     if (result === 'after' || result === 'higher') {
       return (
-        <ChevronDown className="w-4 h-4 md:w-5 md:h-5 text-survivor-blue" />
+        <span className="text-lg md:text-xl text-survivor-blue font-bold ml-1">
+          ↓
+        </span>
       );
     }
     return null;
@@ -46,7 +48,7 @@ export default function ComparisonCell({
         <span className="font-bold text-xs md:text-sm text-gray-900 text-center break-words">
           {value}
         </span>
-        {getIcon()}
+        {getArrow()}
       </div>
     </div>
   );
