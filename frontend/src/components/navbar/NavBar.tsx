@@ -1,15 +1,16 @@
 'use client';
 
 import Link from 'next/link';
-import Menu from './Menu';
+// import Menu from './Menu';
 import { GiTorch } from 'react-icons/gi';
-import { MdCalendarToday } from 'react-icons/md';
-import { IoInfinite } from 'react-icons/io5';
+// import { MdCalendarToday } from 'react-icons/md';
+// import { IoInfinite } from 'react-icons/io5';
 
 function NavBar() {
   return (
-    <nav className="relative justify-between gap-4 flex items-center p-4 bg-survivor-sand-light ">
-      <Menu icon={<MdCalendarToday />} color="text-survivor-blue" />
+    <nav className="relative justify-center gap-4 flex items-center p-4 bg-survivor-sand-light">
+      {/* Left Menu - Daily Mode */}
+      {/* <Menu icon={<MdCalendarToday />} color="text-survivor-blue" /> */}
 
       <Link
         href="/"
@@ -21,7 +22,8 @@ function NavBar() {
         </span>
       </Link>
 
-      <Menu icon={<IoInfinite />} color="text-survivor-green" />
+      {/* Right Menu - Unlimited Mode */}
+      {/* <Menu icon={<IoInfinite />} color="text-survivor-green" /> */}
     </nav>
   );
 }

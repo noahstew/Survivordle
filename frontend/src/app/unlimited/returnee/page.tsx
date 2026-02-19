@@ -1,4 +1,7 @@
-function Page() {
-  return <div>Page</div>;
+'use client';
+
+import ReturneeGame from '@/components/game/ReturneeGame';
+
+export default function Page() {
+  return <ReturneeGame />;
 }
-export default Page;
