@@ -74,10 +74,12 @@ export default function Home() {
                     <strong>Last Season:</strong> Most recent season they played
                   </li>
                   <li>
-                    <strong>Age:</strong> Their age during their last season
+                    <strong>Age:</strong> Their age during their most recent
+                    season
                   </li>
                   <li>
                     <strong>Days Lasted:</strong> Total days across all seasons
+                    (including Edge of Extinction)
                   </li>
                   <li>
                     <strong>Votes Against:</strong> Total votes received across
