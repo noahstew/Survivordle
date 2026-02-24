@@ -34,12 +34,13 @@ export default function Home() {
                   <span className="bg-survivor-orange p-1 rounded-lg text-base md:text-lg font-bold">
                     GOAL:
                   </span>{' '}
-                  Try and guess the mystery Survivor returnee from Season 50!
+                  Try and guess the mystery Survivor returnee!
                 </p>
                 <div className="border-black border-b-2 my-4"></div>
 
                 <p className="text-base md:text-lg">
-                  Choose a Survivor returnee and select guess. You'll get hints
+                  Choose a Survivor returnee (anyone who has played 2 or more
+                  times including S50) and select guess. You'll get hints
                   comparing your guess to the mystery player:
                 </p>
                 <ul className="list-disc list-inside mt-2 space-y-2 text-base md:text-lg">
